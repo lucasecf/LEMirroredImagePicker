@@ -25,3 +25,4 @@ When using the LEImagePickerController, the front camera photo works just fine, 
 To use the LEImagePickerController, just download the project and drag or copy the two files (LEImagePickerController.h and LEImagePickerController.m) to 
 your project, and use as you would use the UIImagePickerController normally
 
+in construction...
