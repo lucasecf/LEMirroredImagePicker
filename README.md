@@ -23,6 +23,37 @@ When using the LEImagePickerController, the front camera photo works just fine, 
 ## How to Use
 
 To use the LEImagePickerController, just download the project and drag or copy the two files (LEImagePickerController.h and LEImagePickerController.m) to 
-your project, and use as you would use the UIImagePickerController normally
+your project, and use as you would use the UIImagePickerController normally.
 
-in construction...
+It even responds to the same delegate. See the example below, in some UIViewController
+
+```  objective-c
+- (IBAction)cameraButtonDidTouch:(id)sender
+{
+    self.imagePicker = [[LEImagePickerController alloc] init];
+    self.imagePicker.delegate = self;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    }
+    else
+    {
+        self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    [self presentViewController:self.imagePicker animated:YES completion:nil];
+
+}
+
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    UIImage *newImage = [info objectForKey:UIImagePickerControllerOriginalImage];
+
+    self.imageView.image = newImage;
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+```
