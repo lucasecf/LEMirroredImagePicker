@@ -26,6 +26,8 @@ your project, and use as you would use the UIImagePickerController normally.
 It even responds to the same delegate. See the example below, in some UIViewController
 
 ```  objective-c
+
+//some button action that invokes the camera
 - (IBAction)cameraButtonDidTouch:(id)sender
 {
     self.imagePicker = [[LEImagePickerController alloc] init];
