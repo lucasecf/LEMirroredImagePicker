@@ -3,8 +3,6 @@ LEImagePickerController
 
 ## What is this
 
-This project has the goal to make a framework to the camera phone in iOS.
-
 When using the UIImagePickerController, some of you must notice that the photo that the front camera takes is mirrored.
 
 And even if you just invert the image taken in the delegate, the image displayed as preview one in the UIImagePickerController
