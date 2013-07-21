@@ -10,7 +10,7 @@ is still mirrored, resulting in a bad experience by the user, who expects the ca
 
 See the example of UIImagePickerController's front camera photo below:
 
-![My image](https://photos-6.dropbox.com/t/0/AABnOVCboaeZBowyRUqxer4hSn2MZm6k3j4vTTikg9_9_A/12/32381796/png/32x32/3/_/1/2/foto%20%281%29.PNG/E4RfcrDqISSm6dQuUk1zefPeBFXlg7RDBp_awOq9e4Y?size=1280x960)  ------ ![My image](https://photos-5.dropbox.com/t/0/AACGsGcqDYKXUI8v0YimBJ7cyb41kAmMffgpH7Oj_WgZ_w/12/32381796/png/32x32/3/_/1/2/foto.PNG/AkTkRREfrfJcgsywVKNZRLVjT9SsMwJ-EK_4s-8EMwg?size=1280x960)
+![My image](http://img27.imageshack.us/img27/5982/y1pe.png)  ------ ![My image](http://imageshack.us/a/img836/2940/mehu.png)
 
 Image that appears in the c amera  ------------   Mirrored image that appears in the preview image
 
