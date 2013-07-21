@@ -18,6 +18,7 @@
 		E1BF32E41793389E008C522A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E1BF32E31793389E008C522A /* Default-568h@2x.png */; };
 		E1BF32E71793389E008C522A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1BF32E51793389E008C522A /* MainStoryboard.storyboard */; };
 		E1BF32EA1793389E008C522A /* LEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BF32E91793389E008C522A /* LEViewController.m */; };
+		E1BF32F2179339B8008C522A /* LEImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1BF32F1179339B8008C522A /* LEImagePickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		E1BF32E61793389E008C522A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		E1BF32E81793389E008C522A /* LEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LEViewController.h; sourceTree = "<group>"; };
 		E1BF32E91793389E008C522A /* LEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LEViewController.m; sourceTree = "<group>"; };
+		E1BF32F0179339B8008C522A /* LEImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEImagePickerController.h; sourceTree = SOURCE_ROOT; };
+		E1BF32F1179339B8008C522A /* LEImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEImagePickerController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				E1BF32E51793389E008C522A /* MainStoryboard.storyboard */,
 				E1BF32E81793389E008C522A /* LEViewController.h */,
 				E1BF32E91793389E008C522A /* LEViewController.m */,
+				E1BF32F0179339B8008C522A /* LEImagePickerController.h */,
+				E1BF32F1179339B8008C522A /* LEImagePickerController.m */,
 				E1BF32D41793389D008C522A /* Supporting Files */,
 			);
 			path = "flipped-cam";
@@ -177,6 +182,7 @@
 				E1BF32DA1793389D008C522A /* main.m in Sources */,
 				E1BF32DE1793389D008C522A /* LEAppDelegate.m in Sources */,
 				E1BF32EA1793389E008C522A /* LEViewController.m in Sources */,
+				E1BF32F2179339B8008C522A /* LEImagePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

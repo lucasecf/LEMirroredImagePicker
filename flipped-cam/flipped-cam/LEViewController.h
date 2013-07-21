@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LEViewController : UIViewController
+@class LEImagePickerController;
 
+@interface LEViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (nonatomic, strong) LEImagePickerController *imagePicker;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+
+- (IBAction)cameraButtonDidTouch:(id)sender;
 @end
