@@ -70,8 +70,6 @@
 	CGFloat y = [acceleration y];
 	CGFloat angle = atan2(y, x);
     
-    NSLog(@"angle = %f",angle);
-    
 	if ( angle >= -2.25f && angle <= -0.25f )
 	{
         self.interfaceOrientation = UIInterfaceOrientationPortrait;
