@@ -138,9 +138,12 @@
     
     CameraOverlay *view = [[CameraOverlay alloc] initWithFrame:self.view.frame andPicker:self];
     [view.button addTarget:self action:@selector(flipCamera:) forControlEvents:UIControlEventTouchUpInside];
-    self.cameraOverlayView = view;
-    self.cameraViewTransform = CGAffineTransformScale(self.cameraViewTransform, -1, 1);
     
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        self.cameraOverlayView = view;
+        self.cameraViewTransform = CGAffineTransformScale(self.cameraViewTransform, -1, 1);
+    }
 	// Do any additional setup after loading the view.
 }
 
