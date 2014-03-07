@@ -57,3 +57,24 @@ It even responds to the same delegate. See the example below, in some `UIViewCon
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 ```
+
+
+
+##Collaborate
+Liked the project? Is there something missing or that could be better? Feel free to contribute :)
+
+1. Fork it
+
+2. Create your branch
+   ``` git checkout -b name-your-feature ```
+
+3. Commit it
+   ``` git commit -m 'the differece' ```
+
+4. Push it
+   ``` git push origin name-your-feature ```
+
+5. Create a Pull Request
+
+##License
+This projected is licensed under the terms of the MIT license.
