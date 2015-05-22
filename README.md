@@ -1,80 +1,96 @@
-LEImagePickerController
+LEMirroredImagePicker
 ===========
 
 ## What is this
 
-When using the `UIImagePickerController`, some of you must notice that the photo that the front camera takes is mirrored.
+When using the `UIImagePickerController`, some of you must have noticed that, by default, the photo taken by the front camera is mirrored.
 
-And even if you just invert the image taken in the delegate, the image displayed as preview one in the UIImagePickerController
-is still mirrored, resulting in a bad experience by the user, who expects the camera works just as the camera APP.
+And even if you just invert the image taken in the delegate, the image displayed as preview by the `UIImagePickerController` will be still mirrored, resulting in a odd experience by the user.
 
-See the example of `UIImagePickerController`'s front camera photo below:
+See the example of UIImagePickerController's front camera photo below:
 
-![My image](http://img27.imageshack.us/img27/5982/y1pe.png)  ------ ![My image](http://imageshack.us/a/img836/2940/mehu.png)
+<p align="center">
+<img src="Images/original.jpg" alt="image 1" width="320px" />
+<img src="Images/mirrored.jpg" alt="image 2" width="320px" />
+</p>
 
-Image that appears in the c amera  ------------   Mirrored image that appears in the preview image
+## Install
+
+#### Manually
+
+Drag and copy the two files in the [__LEMirroredImagePicker__](Pod/Classes) folder into your project, or add it as a git submodule.
+
+#### Cocoapods
+
+`LEMirroredImagePicker` is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "LEMirroredImagePicker"
+```
+
+## How to use
+
+`LEMirroredImagePicker` is ridiculously easy to use. All you need to do is invoke the two lines of code below:
+
+```objective-c
+#import "LEMirroredImagePicker.h"
+
+(..)
+@property(nonatomic) LEMirroredImagePicker *mirrorFrontPicker;
+(..)
+
+self.mirrorFrontPicker = [[LEMirroredImagePicker alloc] initWithImagePicker:pickerController];
+[self.mirrorFrontPicker mirrorFrontCamera];
+
+(..)
+```
+
+And thats it. Now the images taken by the front camera shown in the preview will be equal the ones the saw in the camera. See a complete example, with the `UIImagePickerController`, below:
 
 
-When using the `LEImagePickerController`, the front camera photo works just fine, the preview image will be the same image displayed in the screen, as expected.
+```objective-c
+UIImagePickerController *pickerController = [UIImagePickerController new];
+pickerController.delegate = self;
 
-
-## How to Use
-
-To use the `LEImagePickerController`, just download the project and drag or copy the two files `LEImagePickerController.h` and `LEImagePickerController.m` to 
-your project, and use as you would use the `UIImagePickerController` normally.
-
-It even responds to the same delegate. See the example below, in some `UIViewController`
-
-```  objective-c
-
-//some button action that invokes the camera
-- (IBAction)cameraButtonDidTouch:(id)sender
+if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
 {
-    self.imagePicker = [[LEImagePickerController alloc] init];
-    self.imagePicker.delegate = self;
-    
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-    {
-        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
-    }
-    else
-    {
-        self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    }
-    
-    [self presentViewController:self.imagePicker animated:YES completion:nil];
-
+    pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    pickerController.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+}
+else
+{
+    pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
 }
 
+self.mirrorFrontPicker = [[LEMirroredImagePicker alloc] initWithImagePicker:pickerController];
+[self.mirrorFrontPicker mirrorFrontCamera];
 
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    UIImage *newImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-
-    self.imageView.image = newImage;
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+[self presentViewController:pickerController animated:YES completion:nil];
 ```
 
 
-
-##Collaborate
+## Collaborate
 Liked the project? Is there something missing or that could be better? Feel free to contribute :)
 
 1. Fork it
 
 2. Create your branch
-   ``` git checkout -b name-your-feature ```
+``` git checkout -b name-your-feature ```
 
 3. Commit it
-   ``` git commit -m 'the differece' ```
+``` git commit -m 'the difference' ```
 
 4. Push it
-   ``` git push origin name-your-feature ```
+``` git push origin name-your-feature ```
 
 5. Create a Pull Request
 
-##License
-This projected is licensed under the terms of the MIT license.
+
+## Author
+
+Lucas Eduardo, lucasecf@gmail.com
+
+## License
+
+LEMirroredImagePicker is available under the MIT license. See the LICENSE file for more info.

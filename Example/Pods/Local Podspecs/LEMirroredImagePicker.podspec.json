@@ -1,0 +1,25 @@
+{
+  "name": "LEMirroredImagePicker",
+  "version": "0.1.0",
+  "summary": "A short description of LEMirroredImagePicker.",
+  "description": "                       An optional longer description of LEMirroredImagePicker\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/LEMirroredImagePicker",
+  "license": "MIT",
+  "authors": {
+    "Lucas Eduardo": "lucasecf@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/LEMirroredImagePicker.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "LEMirroredImagePicker": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

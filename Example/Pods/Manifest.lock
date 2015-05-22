@@ -1,0 +1,14 @@
+PODS:
+  - LEMirroredImagePicker (0.1.0)
+
+DEPENDENCIES:
+  - LEMirroredImagePicker (from `../`)
+
+EXTERNAL SOURCES:
+  LEMirroredImagePicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LEMirroredImagePicker: 6ffe02274381537555739130e4a872e1b4ccf5f8
+
+COCOAPODS: 0.37.0
