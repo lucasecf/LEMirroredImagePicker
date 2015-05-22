@@ -7,11 +7,18 @@ When using the `UIImagePickerController`, some of you must have noticed that, by
 
 And even if you just invert the image taken in the delegate, the image displayed as preview by the `UIImagePickerController` will be still mirrored, resulting in a odd experience by the user.
 
-See the example of UIImagePickerController's front camera photo below:
+See the example of UIImagePickerController's default front camera photo below:
 
 <p align="center">
-<img src="Images/original.jpg" alt="image 1" width="320px" />
-<img src="Images/mirrored.jpg" alt="image 2" width="320px" />
+<img src="Images/picker-camera.jpg" alt="image 1" width="320px" />
+<img src="Images/picker-preview.jpg" alt="image 2" width="320px" />
+</p>
+
+And now used together with the LEMirroredImagePicker:
+
+<p align="center">
+<img src="Images/le-camera.jpg" alt="image 1" width="320px" />
+<img src="Images/le-preview.jpg" alt="image 2" width="320px" />
 </p>
 
 ## Install
