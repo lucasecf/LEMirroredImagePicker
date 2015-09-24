@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LEMirroredImagePicker: 6ffe02274381537555739130e4a872e1b4ccf5f8
+  LEMirroredImagePicker: f9cedc540976a6a9ba6c0bef0295be9b477c8acc
 
-COCOAPODS: 0.37.0
+COCOAPODS: 0.38.2
