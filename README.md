@@ -27,7 +27,7 @@ And now used together with the LEMirroredImagePicker:
 
 Drag and copy the two files in the [__LEMirroredImagePicker__](Pod/Classes) folder into your project, or add it as a git submodule.
 
-#### Cocoapods
+#### CocoaPods
 
 `LEMirroredImagePicker` is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
